@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.DiscogsTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2026-05-17T14:36:26.667Z" hostname="6aee02a181a8" time="27.547">
+  <properties/>
+  <testcase name="Verify static page title loads correctly" classname="tests.DiscogsTest" time="27.375">
+    <failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. &#10;Host info: host: '6aee02a181a8', ip: '172.17.0.2'" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: '6aee02a181a8', ip: '172.17.0.2'
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:168)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at tests.BaseTest.setUp(BaseTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '25.0.3'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:248)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	... 10 more
+</failure>
+  </testcase>
+  <testcase name="User can login, update profile with random data, and logout safely" classname="tests.DiscogsTest" time="0.077">
+    <failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. &#10;Host info: host: '6aee02a181a8', ip: '172.17.0.2'" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: '6aee02a181a8', ip: '172.17.0.2'
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:625)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:168)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:73)
+	at tests.BaseTest.setUp(BaseTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: org.openqa.selenium.WebDriverException: Driver server process died prematurely.
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '25.0.3'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:248)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	... 10 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

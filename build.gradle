@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.discogs.tests'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/main/java/tests']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+dependencies {
+    // Selenium WebDriver
+    implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+    
+    // JUnit 5
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    implementation 'org.junit.platform:junit-platform-suite:1.10.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
