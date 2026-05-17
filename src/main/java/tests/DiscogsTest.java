@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import utils.ConfigReader;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import utils.ConfigReader;
 
 public class DiscogsTest extends BaseTest {
 
@@ -47,5 +47,21 @@ public class DiscogsTest extends BaseTest {
         // 4. Logout Requirement
         homePage.logout();
         Assertions.assertTrue(driver.getCurrentUrl().contains("login") || driver.getCurrentUrl().equals(ConfigReader.getProperty("baseUrl") + "/"), "User was not logged out properly");
+    }
+
+    @Test
+    @DisplayName("Verify multiple pages have correct title")
+    public void verifyMultiplePagesTitle() {
+        String[] urls = {
+            ConfigReader.getProperty("baseUrl"),
+            ConfigReader.getProperty("baseUrl") + "/login",
+            ConfigReader.getProperty("baseUrl") + "/search"
+        };
+        
+        for (String url : urls) {
+            driver.get(url);
+            Assertions.assertNotNull(driver.getTitle(), "Page title is null for: " + url);
+            Assertions.assertTrue(driver.getTitle().length() > 0, "Page title is empty for: " + url);
+        }
     }
 }
